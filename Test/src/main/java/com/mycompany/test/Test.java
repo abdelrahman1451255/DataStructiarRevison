@@ -8,21 +8,31 @@ import java.util.*;
 
 /**
  *
- * Shaker
+ * Mr Shaker
  *
  * @author lab502
  */
 public class Test {
 
     public static void main(String[] args) {
-        ArrayList<Integer> hello = new ArrayList();
-        ArrayList<Integer> a3 = new ArrayList();
-        insert10(a3);
-        insert10(hello);
+        ArrayList<String> a1 = new ArrayList(); 
+        String z = "hello";
+        a1.add("hello");
+        a1.add("asdfa");
+        boolean b =search(a1, z);
+        System.out.println(b);
+        ArrayList<String> a2 = new ArrayList(); 
+        a2.addAll(a1);
+        a2.add("do it");
+        System.out.println(larg(a1, a2));
+//        ArrayList<Integer> hello = new ArrayList();
+//        ArrayList<Integer> a3 = new ArrayList();
+//        insert10(a3);
+//        insert10(hello);
 //        System.out.println(sum(hello));
 //        System.out.println(sum20(hello));
 //System.out.println(min(hello));
-System.out.println(minTwoArray(hello,a3));
+//System.out.println(minTwoArray(hello,a3));
         //ما كتبنا اسم الكلاس لأنه بنفس الكلاس
 //        if(1=9)shortHand
             
@@ -94,6 +104,25 @@ System.out.println(minTwoArray(hello,a3));
             a1.add(S.nextInt());
 
         }
+        
     }
     //insert number
+    public static  boolean search(ArrayList<String> a1 , String z ){
+    if(a1.indexOf(z)==-1)
+        return false;
+    else
+        return true;
+    }
+    public static  void searchAnother(ArrayList<String> a1 , String z ){
+    if(a1.contains(z))
+            System.out.println("yes");
+    else
+            System.out.println("no");
+    }
+    public static int larg(ArrayList<String> a1 , ArrayList<String> a2 ){
+    if(a1.size()>a2.size())
+        return a1.size();
+    else
+        return a2.size();
+    }
 }
